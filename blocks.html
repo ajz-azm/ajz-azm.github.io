@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AgamiTeam</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			min-height: 100vh;
+			background-color: #000;
+			margin: 0;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			width: 100%;
+			max-width: 600px;
+			grid-gap: 10px;
+		}
+
+		.card {
+			display: block;
+			width: 100%;
+			border-radius: 8px;
+			background-color: #333;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.card::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0;
+			padding-top: 100%;
+		}
+
+		.card__effect {
+			display: block;
+			width: 0;
+			height: 0;
+			border-radius: inherit;
+			background-color: #09f;
+			color: #fff;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			pointer-events: none;
+		}
+
+		.card[data-pos] .card__effect {
+			transition-duration: 0.2s;
+			transition-timing-function: ease;
+		}
+
+		.card[data-pos="right"] .card__effect {
+			left: auto;
+		}
+
+		.card-hover[data-pos="left"] .card__effect,
+		.card-hover[data-pos="right"] .card__effect {
+			width: 100%;
+		}
+
+		.card[data-pos="left"] .card__effect,
+		.card[data-pos="right"] .card__effect {
+			height: 100%;
+			transition-property: width;
+		}
+
+		.card[data-pos="right"] .card__effect {
+			left: auto;
+		}
+
+		.card[data-pos="bottom"] .card__effect {
+			top: auto;
+		}
+
+		.card-hover[data-pos="top"] .card__effect,
+		.card-hover[data-pos="bottom"] .card__effect {
+			height: 100%;
+		}
+
+		.card[data-pos="top"] .card__effect,
+		.card[data-pos="bottom"] .card__effect {
+			width: 100%;
+			transition-property: height;
+		}
+
+		.card__hover {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid">
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__effect">
+				<div class="card__hover"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener('mouseenter', e => {
+			if (e.target.classList.contains('card')) {
+				e.target.setAttribute('data-pos', checkCur(e, e.target));
+				e.target.classList.add('card-hover');
+				//
+				e.target.querySelector('.card__hover').innerText = checkCur(e, e.target); // Чисто для демонстрации, можно удалить
+			}
+		}, true);
+
+		document.addEventListener('mouseleave', e => {
+			if (e.target.classList.contains('card')
+				&& e.target.classList.contains('card-hover')) {
+				e.target.setAttribute('data-pos', checkCur(e, e.target));
+				//
+				e.target.classList.remove('card-hover');
+				setTimeout(() => {
+					e.target.removeAttribute('data-pos');
+				}, 200);
+			}
+		}, true);
+
+		const checkCur = (e, el) => {
+			let pos = [], check = [],
+				w = el.getBoundingClientRect().width,
+				h = el.getBoundingClientRect().height,
+				x = (e.clientX - el.getBoundingClientRect().left),
+				y = (e.clientY - el.getBoundingClientRect().top);
+
+			if (x / w > .5) {
+				pos[0] = w - x;
+				check[0] = 'left';
+			} else {
+				pos[0] = x;
+				check[0] = 'right';
+			}
+
+			if (y / h > .5) {
+				pos[1] = h - y;
+				check[1] = 'top';
+			} else {
+				pos[1] = y;
+				check[1] = 'bottom';
+			}
+
+			return check[pos[0] < pos[1] ? 0 : 1];
+		}
+	</script>
+</body>
+
+</html>
